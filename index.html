@@ -14,6 +14,24 @@
       -webkit-font-smoothing: antialiased;
     }
 
+    .logo-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+    }
+
+    .logo-icon-sm {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       background: rgba(255,255,255,0.85);
@@ -23,7 +41,6 @@
       padding: 0 48px; height: 56px;
     }
     .nav-logo { display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 600; color: #1d1d1f; letter-spacing: -0.3px; text-decoration: none; }
-    .nav-logo-icon { width: 26px; height: 26px; background: #1d1d1f; border-radius: 7px; display: flex; align-items: center; justify-content: center; font-size: 13px; }
     .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
     .nav-links a { font-size: 13px; color: #6e6e73; text-decoration: none; letter-spacing: -0.1px; transition: color 0.15s; }
     .nav-links a:hover { color: #1d1d1f; }
@@ -41,14 +58,11 @@
     .btn-primary:hover { background: #3a3a3c; transform: scale(1.02); }
     .btn-ghost { background: transparent; color: #1d1d1f; border: 1px solid rgba(0,0,0,0.15); border-radius: 980px; padding: 13px 26px; font-size: 15px; font-family: inherit; font-weight: 400; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; letter-spacing: -0.2px; transition: background 0.15s; }
     .btn-ghost:hover { background: #f5f5f7; }
-
     .hero-industries { display: flex; gap: 16px; flex-wrap: wrap; }
     .industry-pill { display: flex; align-items: center; gap: 8px; background: #f5f5f7; border-radius: 12px; padding: 10px 16px; font-size: 14px; color: #1d1d1f; font-weight: 500; letter-spacing: -0.1px; }
-    .industry-pill span { font-size: 18px; }
 
     .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #aeaeb2; margin-bottom: 16px; }
 
-    /* INDUSTRY SECTIONS */
     .industry-section { padding: 100px 48px; }
     .industry-section.grey { background: #f5f5f7; }
     .industry-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
@@ -65,7 +79,7 @@
     .industry-card.dark { background: #1d1d1f; }
     .card-header { padding: 20px 20px 16px; border-bottom: 1px solid rgba(0,0,0,0.06); display: flex; align-items: center; gap: 10px; }
     .industry-card.dark .card-header { border-color: rgba(255,255,255,0.08); }
-    .card-icon { width: 32px; height: 32px; border-radius: 9px; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
+    .card-icon { width: 32px; height: 32px; border-radius: 9px; background: #f5f5f7; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; }
     .industry-card.dark .card-icon { background: rgba(255,255,255,0.1); }
     .card-title { font-size: 14px; font-weight: 600; color: #1d1d1f; letter-spacing: -0.2px; }
     .industry-card.dark .card-title { color: #fff; }
@@ -73,8 +87,8 @@
     .card-body { padding: 16px 20px; display: flex; flex-direction: column; gap: 10px; min-height: 220px; }
     .chat-row { display: flex; gap: 8px; align-items: flex-end; }
     .chat-row.user { flex-direction: row-reverse; }
-    .chat-avatar { width: 22px; height: 22px; border-radius: 6px; background: #1d1d1f; display: flex; align-items: center; justify-content: center; font-size: 10px; flex-shrink: 0; }
-    .industry-card.dark .chat-avatar { background: rgba(255,255,255,0.15); }
+    .chat-avatar { width: 22px; height: 22px; border-radius: 6px; background: #f5f5f7; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; }
+    .industry-card.dark .chat-avatar { background: rgba(255,255,255,0.1); }
     .chat-bubble { max-width: 78%; padding: 9px 12px; border-radius: 14px; font-size: 12.5px; line-height: 1.5; letter-spacing: -0.1px; }
     .chat-bubble.ai { background: #f5f5f7; color: #1d1d1f; border-radius: 14px 14px 14px 3px; }
     .industry-card.dark .chat-bubble.ai { background: rgba(255,255,255,0.1); color: #fff; }
@@ -87,7 +101,6 @@
     .card-send { width: 24px; height: 24px; background: #1d1d1f; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .industry-card.dark .card-send { background: #0071e3; }
 
-    /* HOW IT WORKS */
     .how-section { padding: 100px 48px; max-width: 1080px; margin: 0 auto; }
     .how-section h2 { font-size: 48px; font-weight: 700; letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 60px; max-width: 500px; }
     .how-section h2 span { color: #6e6e73; font-weight: 400; }
@@ -104,7 +117,6 @@
     .setup-banner-btn { background: #fff; color: #1d1d1f; border: none; border-radius: 980px; padding: 13px 26px; font-size: 14px; font-family: inherit; font-weight: 500; cursor: pointer; text-decoration: none; white-space: nowrap; transition: all 0.15s; display: inline-block; }
     .setup-banner-btn:hover { background: #f5f5f7; }
 
-    /* PRICING */
     .pricing-section { background: #f5f5f7; padding: 100px 48px; }
     .pricing-inner { max-width: 1080px; margin: 0 auto; }
     .pricing-inner h2 { font-size: 48px; font-weight: 700; letter-spacing: -1.5px; margin-bottom: 8px; }
@@ -144,7 +156,6 @@
     .setup-note { margin-top: 24px; text-align: center; font-size: 13px; color: #6e6e73; letter-spacing: -0.1px; }
     .setup-note strong { color: #1d1d1f; }
 
-    /* FAQ */
     .faq-section { padding: 100px 48px; max-width: 1080px; margin: 0 auto; }
     .faq-section h2 { font-size: 48px; font-weight: 700; letter-spacing: -1.5px; margin-bottom: 48px; }
     .faq-item { border-top: 1px solid rgba(0,0,0,0.08); padding: 20px 0; cursor: pointer; }
@@ -192,9 +203,15 @@
 </head>
 <body>
 
+  <!-- LOGO SVG DEFINITION - used everywhere -->
+  <!-- The logo: white/light bg with rounded corners, black house outline -->
+
   <nav>
     <a href="#" class="nav-logo">
-      <div class='nav-logo-icon'><svg width='28' height='28' viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg' style='flex-shrink:0;'><rect width='1000' height='1000' rx='220' fill='#f5f5f5'/><polyline points='500,200 760,420 760,760 240,760 240,420 500,200' fill='none' stroke='#1a1a1a' stroke-width='52' stroke-linejoin='round' stroke-linecap='round'/></svg></div>
+      <svg width="28" height="28" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+        <rect width="1000" height="1000" rx="220" fill="#f5f5f5"/>
+        <polyline points="500,200 760,420 760,760 240,760 240,420 500,200" fill="none" stroke="#1a1a1a" stroke-width="52" stroke-linejoin="round" stroke-linecap="round"/>
+      </svg>
       HomeBase AI
     </a>
     <ul class="nav-links">
@@ -207,7 +224,6 @@
     </ul>
   </nav>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="hero-tag">
       <div class="hero-tag-dot"></div>
@@ -220,13 +236,30 @@
       <a href="#pricing" class="btn-ghost">Book a demo</a>
     </div>
     <div class="hero-industries">
-      <div class="industry-pill"><span><svg width='20' height='20' viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg' style='flex-shrink:0;'><rect width='1000' height='1000' rx='220' fill='#f5f5f5'/><polyline points='500,200 760,420 760,760 240,760 240,420 500,200' fill='none' stroke='#1a1a1a' stroke-width='52' stroke-linejoin='round' stroke-linecap='round'/></svg></span> Mortgage Brokers</div>
-      <div class="industry-pill"><span><svg width='20' height='20' viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg' style='flex-shrink:0;'><rect width='1000' height='1000' rx='220' fill='#f5f5f5'/><polyline points='500,200 760,420 760,760 240,760 240,420 500,200' fill='none' stroke='#1a1a1a' stroke-width='52' stroke-linejoin='round' stroke-linecap='round'/></svg></span> Real Estate Agents</div>
-      <div class="industry-pill"><span>🏢</span> Brokerages & Teams</div>
+      <div class="industry-pill">
+        <svg width="20" height="20" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+          <rect width="1000" height="1000" rx="220" fill="#f5f5f5"/>
+          <polyline points="500,200 760,420 760,760 240,760 240,420 500,200" fill="none" stroke="#1a1a1a" stroke-width="52" stroke-linejoin="round" stroke-linecap="round"/>
+        </svg>
+        Mortgage Brokers
+      </div>
+      <div class="industry-pill">
+        <svg width="20" height="20" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+          <rect width="1000" height="1000" rx="220" fill="#f5f5f5"/>
+          <polyline points="500,200 760,420 760,760 240,760 240,420 500,200" fill="none" stroke="#1a1a1a" stroke-width="52" stroke-linejoin="round" stroke-linecap="round"/>
+        </svg>
+        Real Estate Agents
+      </div>
+      <div class="industry-pill">
+        <svg width="20" height="20" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+          <rect width="1000" height="1000" rx="220" fill="#f5f5f5"/>
+          <polyline points="500,200 760,420 760,760 240,760 240,420 500,200" fill="none" stroke="#1a1a1a" stroke-width="52" stroke-linejoin="round" stroke-linecap="round"/>
+        </svg>
+        Brokerages & Teams
+      </div>
     </div>
   </section>
 
-  <!-- MORTGAGE BROKERS -->
   <section class="industry-section grey" id="mortgage">
     <div class="industry-inner">
       <div class="industry-text">
@@ -234,7 +267,7 @@
         <h2>Close more deals.<br /><span>Answer less questions.</span></h2>
         <p>Your leads arrive confused about rates, DTI, and loan types. HomeBase AI educates them instantly — so by the time they call you, they're ready to move forward.</p>
         <ul class="feature-list">
-          <li><span class="feature-check">✓</span> Answers hundreds of mortgage questions instantly — rates, loan types, DTI, closing costs, and more</li>
+          <li><span class="feature-check">✓</span> Answers hundreds of mortgage questions instantly</li>
           <li><span class="feature-check">✓</span> Trained on your specific loan products and offerings</li>
           <li><span class="feature-check">✓</span> Captures warm leads and routes them to your loan officers</li>
           <li><span class="feature-check">✓</span> Available 24/7 — even when your team isn't</li>
@@ -244,7 +277,12 @@
       </div>
       <div class="industry-card">
         <div class="card-header">
-          <div class="card-icon"><svg width='26' height='26' viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg' style='flex-shrink:0;'><rect width='1000' height='1000' rx='220' fill='#f5f5f5'/><polyline points='500,200 760,420 760,760 240,760 240,420 500,200' fill='none' stroke='#1a1a1a' stroke-width='52' stroke-linejoin='round' stroke-linecap='round'/></svg></div>
+          <div class="card-icon">
+            <svg width="26" height="26" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+              <rect width="1000" height="1000" rx="220" fill="#f5f5f5"/>
+              <polyline points="500,200 760,420 760,760 240,760 240,420 500,200" fill="none" stroke="#1a1a1a" stroke-width="52" stroke-linejoin="round" stroke-linecap="round"/>
+            </svg>
+          </div>
           <div>
             <div class="card-title">HomeBase AI — Mortgage</div>
             <div class="card-subtitle">Powered by AI · Always online</div>
@@ -252,22 +290,25 @@
         </div>
         <div class="card-body">
           <div class="chat-row">
-            <div class="chat-avatar"><svg width='20' height='20' viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg' style='flex-shrink:0;'><rect width='1000' height='1000' rx='220' fill='#f5f5f5'/><polyline points='500,200 760,420 760,760 240,760 240,420 500,200' fill='none' stroke='#1a1a1a' stroke-width='52' stroke-linejoin='round' stroke-linecap='round'/></svg></div>
+            <div class="chat-avatar">
+              <svg width="20" height="20" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+                <rect width="1000" height="1000" rx="220" fill="#f5f5f5"/>
+                <polyline points="500,200 760,420 760,760 240,760 240,420 500,200" fill="none" stroke="#1a1a1a" stroke-width="52" stroke-linejoin="round" stroke-linecap="round"/>
+              </svg>
+            </div>
             <div class="chat-bubble ai">Hi! I can answer any questions you have about mortgages or the home buying process.</div>
           </div>
           <div class="chat-row user">
             <div class="chat-bubble user-b">What credit score do I need?</div>
           </div>
           <div class="chat-row">
-            <div class="chat-avatar"><svg width='20' height='20' viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg' style='flex-shrink:0;'><rect width='1000' height='1000' rx='220' fill='#f5f5f5'/><polyline points='500,200 760,420 760,760 240,760 240,420 500,200' fill='none' stroke='#1a1a1a' stroke-width='52' stroke-linejoin='round' stroke-linecap='round'/></svg></div>
-            <div class="chat-bubble ai">Conventional loans typically require 620+. FHA loans can go as low as 580. The higher your score, the better your interest rate will be.</div>
-          </div>
-          <div class="chat-row user">
-            <div class="chat-bubble user-b">How much do I need for a down payment?</div>
-          </div>
-          <div class="chat-row">
-            <div class="chat-avatar"><svg width='20' height='20' viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg' style='flex-shrink:0;'><rect width='1000' height='1000' rx='220' fill='#f5f5f5'/><polyline points='500,200 760,420 760,760 240,760 240,420 500,200' fill='none' stroke='#1a1a1a' stroke-width='52' stroke-linejoin='round' stroke-linecap='round'/></svg></div>
-            <div class="chat-bubble ai">As little as 3% on conventional loans, 3.5% on FHA. VA and USDA loans can be 0% down if you qualify.</div>
+            <div class="chat-avatar">
+              <svg width="20" height="20" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+                <rect width="1000" height="1000" rx="220" fill="#f5f5f5"/>
+                <polyline points="500,200 760,420 760,760 240,760 240,420 500,200" fill="none" stroke="#1a1a1a" stroke-width="52" stroke-linejoin="round" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="chat-bubble ai">Conventional loans typically require 620+. FHA loans can go as low as 580.</div>
           </div>
         </div>
         <div class="card-footer">
@@ -280,25 +321,29 @@
     </div>
   </section>
 
-  <!-- REAL ESTATE AGENTS -->
   <section class="industry-section" id="realestate">
     <div class="industry-inner reverse">
       <div class="industry-text">
         <div class="section-label">For Real Estate Agents</div>
         <h2>Your listings.<br /><span>Always answering.</span></h2>
-        <p>Buyers browse your listings at midnight with questions you can't answer in real time. HomeBase AI handles it all — from neighborhood info to offer process — and captures their contact info so you wake up to warm leads.</p>
+        <p>Buyers browse your listings at midnight with questions you can't answer in real time. HomeBase AI handles it all and captures their contact info so you wake up to warm leads.</p>
         <ul class="feature-list">
-          <li><span class="feature-check">✓</span> Answers buyer questions about the buying process, neighborhoods, and market conditions</li>
+          <li><span class="feature-check">✓</span> Answers buyer questions about the buying process and market</li>
           <li><span class="feature-check">✓</span> Trained on your active listings and local market</li>
-          <li><span class="feature-check">✓</span> Captures buyer leads 24/7 — even while you're with other clients</li>
-          <li><span class="feature-check">✓</span> Send it to clients as a personal resource during the buying journey</li>
+          <li><span class="feature-check">✓</span> Captures buyer leads 24/7</li>
+          <li><span class="feature-check">✓</span> Send it to clients as a personal resource</li>
           <li><span class="feature-check">✓</span> Branded with your name, photo, and contact info</li>
         </ul>
         <a href="https://homebase-ai-three.vercel.app" target="_blank" class="btn-primary">See it in action →</a>
       </div>
       <div class="industry-card dark">
         <div class="card-header">
-          <div class="card-icon"><svg width='26' height='26' viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg' style='flex-shrink:0;'><rect width='1000' height='1000' rx='220' fill='#f5f5f5'/><polyline points='500,200 760,420 760,760 240,760 240,420 500,200' fill='none' stroke='#1a1a1a' stroke-width='52' stroke-linejoin='round' stroke-linecap='round'/></svg></div>
+          <div class="card-icon">
+            <svg width="26" height="26" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+              <rect width="1000" height="1000" rx="220" fill="#f5f5f5"/>
+              <polyline points="500,200 760,420 760,760 240,760 240,420 500,200" fill="none" stroke="#1a1a1a" stroke-width="52" stroke-linejoin="round" stroke-linecap="round"/>
+            </svg>
+          </div>
           <div>
             <div class="card-title">HomeBase AI — Real Estate</div>
             <div class="card-subtitle">Powered by AI · Always online</div>
@@ -306,22 +351,25 @@
         </div>
         <div class="card-body">
           <div class="chat-row">
-            <div class="chat-avatar"><svg width='20' height='20' viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg' style='flex-shrink:0;'><rect width='1000' height='1000' rx='220' fill='#f5f5f5'/><polyline points='500,200 760,420 760,760 240,760 240,420 500,200' fill='none' stroke='#1a1a1a' stroke-width='52' stroke-linejoin='round' stroke-linecap='round'/></svg></div>
-            <div class="chat-bubble ai">Hi! I can answer questions about buying a home, the process, or any of our current listings.</div>
+            <div class="chat-avatar">
+              <svg width="20" height="20" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+                <rect width="1000" height="1000" rx="220" fill="#f5f5f5"/>
+                <polyline points="500,200 760,420 760,760 240,760 240,420 500,200" fill="none" stroke="#1a1a1a" stroke-width="52" stroke-linejoin="round" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="chat-bubble ai">Hi! I can answer questions about buying a home or any of our current listings.</div>
           </div>
           <div class="chat-row user">
             <div class="chat-bubble user-b">How does the offer process work?</div>
           </div>
           <div class="chat-row">
-            <div class="chat-avatar"><svg width='20' height='20' viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg' style='flex-shrink:0;'><rect width='1000' height='1000' rx='220' fill='#f5f5f5'/><polyline points='500,200 760,420 760,760 240,760 240,420 500,200' fill='none' stroke='#1a1a1a' stroke-width='52' stroke-linejoin='round' stroke-linecap='round'/></svg></div>
-            <div class="chat-bubble ai">Once you find a home you love, your agent submits a written offer with your price and terms. The seller can accept, reject, or counter. If accepted, you move into escrow.</div>
-          </div>
-          <div class="chat-row user">
-            <div class="chat-bubble user-b">What's earnest money?</div>
-          </div>
-          <div class="chat-row">
-            <div class="chat-avatar"><svg width='20' height='20' viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg' style='flex-shrink:0;'><rect width='1000' height='1000' rx='220' fill='#f5f5f5'/><polyline points='500,200 760,420 760,760 240,760 240,420 500,200' fill='none' stroke='#1a1a1a' stroke-width='52' stroke-linejoin='round' stroke-linecap='round'/></svg></div>
-            <div class="chat-bubble ai">Earnest money is a deposit (usually 1-3% of the purchase price) that shows the seller you're serious. It goes toward your down payment at closing.</div>
+            <div class="chat-avatar">
+              <svg width="20" height="20" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+                <rect width="1000" height="1000" rx="220" fill="#f5f5f5"/>
+                <polyline points="500,200 760,420 760,760 240,760 240,420 500,200" fill="none" stroke="#1a1a1a" stroke-width="52" stroke-linejoin="round" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="chat-bubble ai">Once you find a home you love, your agent submits a written offer. The seller can accept, reject, or counter.</div>
           </div>
         </div>
         <div class="card-footer">
@@ -334,7 +382,6 @@
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
   <section class="how-section" id="how">
     <div class="section-label">How it works</div>
     <h2>Live in 24 hours.<br /><span>No developer needed.</span></h2>
@@ -366,11 +413,10 @@
         <h3>We'll handle everything.</h3>
         <p>No developer? No problem. For a one-time fee of <strong>$299</strong>, we set up HomeBase AI on your website, configure your branding, and make sure everything works perfectly.</p>
       </div>
-      <a href="mailto:hello@homebaseai.com" class="setup-banner-btn">Get set up →</a>
+      <a href="mailto:hello@homebaseai.app" class="setup-banner-btn">Get set up →</a>
     </div>
   </div>
 
-  <!-- PRICING -->
   <section class="pricing-section" id="pricing">
     <div class="pricing-inner">
       <div class="section-label">Pricing</div>
@@ -391,7 +437,7 @@
             <li><span class="check">✓</span> Email support</li>
             <li><span class="check">✓</span> DIY setup — code provided</li>
           </ul>
-          <a href="mailto:hello@homebaseai.com" class="pricing-btn btn-dark">Get started</a>
+          <a href="mailto:hello@homebaseai.app" class="pricing-btn btn-dark">Get started</a>
         </div>
         <div class="pricing-card growth">
           <div class="pricing-badge">Most popular</div>
@@ -408,7 +454,7 @@
             <li><span class="check">✓</span> Priority response time</li>
             <li><span class="check">✓</span> We handle setup for you</li>
           </ul>
-          <a href="mailto:hello@homebaseai.com" class="pricing-btn btn-mid">Get started</a>
+          <a href="mailto:hello@homebaseai.app" class="pricing-btn btn-mid">Get started</a>
         </div>
         <div class="pricing-card enterprise">
           <div class="pricing-tier">Enterprise</div>
@@ -424,40 +470,35 @@
             <li><span class="check">✓</span> SLA guarantee</li>
             <li><span class="check">✓</span> Full white-glove setup</li>
           </ul>
-          <a href="mailto:hello@homebaseai.com" class="pricing-btn btn-light">Contact us</a>
+          <a href="mailto:hello@homebaseai.app" class="pricing-btn btn-light">Contact us</a>
         </div>
       </div>
       <p class="setup-note">Want us to handle setup? Add our <strong>Done For You setup for $299</strong> — one time, any plan.</p>
     </div>
   </section>
 
-  <!-- FAQ -->
   <section class="faq-section" id="faq">
     <div class="section-label">FAQ</div>
     <h2>Common questions.</h2>
     <div class="faq-item" onclick="toggleFaq(this)">
       <div class="faq-q">Is this for mortgage brokers or real estate agents? <span class="faq-icon">+</span></div>
-      <div class="faq-a">Both. HomeBase AI is fully customizable for mortgage brokers, real estate agents, brokerages, and teams. We configure it based on your specific business and what your clients need to know.</div>
+      <div class="faq-a">Both. HomeBase AI is fully customizable for mortgage brokers, real estate agents, brokerages, and teams.</div>
     </div>
     <div class="faq-item" onclick="toggleFaq(this)">
       <div class="faq-q">Do I need a developer to set this up? <span class="faq-icon">+</span></div>
-      <div class="faq-a">No. We offer a Done For You setup for a one-time fee of $299 — we handle everything. If you have a developer, we provide a simple code snippet they can add in minutes.</div>
+      <div class="faq-a">No. We offer a Done For You setup for a one-time fee of $299. If you have a developer, we provide a simple code snippet they can add in minutes.</div>
     </div>
     <div class="faq-item" onclick="toggleFaq(this)">
       <div class="faq-q">Can it be trained on my specific listings or loan products? <span class="faq-icon">+</span></div>
-      <div class="faq-a">Yes. Growth and Enterprise plans include custom AI training — we feed it your specific listings, loan products, service areas, and any other info that makes it more useful for your clients.</div>
+      <div class="faq-a">Yes. Growth and Enterprise plans include custom AI training on your specific listings, loan products, service areas, and any other info that makes it more useful for your clients.</div>
     </div>
     <div class="faq-item" onclick="toggleFaq(this)">
       <div class="faq-q">Is HomeBase AI financial or legal advice? <span class="faq-icon">+</span></div>
-      <div class="faq-a">No. HomeBase AI is strictly an education tool. It explains concepts clearly but always directs users to speak with a licensed professional for personalized advice.</div>
+      <div class="faq-a">No. HomeBase AI is strictly an education tool. It always directs users to speak with a licensed professional for personalized advice.</div>
     </div>
     <div class="faq-item" onclick="toggleFaq(this)">
       <div class="faq-q">Can I customize the branding? <span class="faq-icon">+</span></div>
       <div class="faq-a">Yes. Every plan includes custom branding — your logo, colors, and contact information. It looks like your product, not ours.</div>
-    </div>
-    <div class="faq-item" onclick="toggleFaq(this)">
-      <div class="faq-q">What happens to the leads it captures? <span class="faq-icon">+</span></div>
-      <div class="faq-a">Lead info is sent directly to you via email. Growth and Enterprise plans include routing to multiple team members. You own your leads completely.</div>
     </div>
     <div class="faq-item" onclick="toggleFaq(this)">
       <div class="faq-q">Can I cancel anytime? <span class="faq-icon">+</span></div>
@@ -470,13 +511,16 @@
     <p>Join mortgage brokers and real estate agents using HomeBase AI to capture more leads and close more deals.</p>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
       <a href="https://homebase-ai-three.vercel.app" target="_blank" class="btn-primary" style="background:#fff;color:#1d1d1f;">Try it free →</a>
-      <a href="mailto:hello@homebaseai.com" class="btn-ghost" style="color:#fff;border-color:rgba(255,255,255,0.3);">Contact us</a>
+      <a href="mailto:hello@homebaseai.app" class="btn-ghost" style="color:#fff;border-color:rgba(255,255,255,0.3);">Contact us</a>
     </div>
   </section>
 
   <footer>
     <div class="footer-logo">
-      <div class='nav-logo-icon'><svg width='28' height='28' viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg' style='flex-shrink:0;'><rect width='1000' height='1000' rx='220' fill='#f5f5f5'/><polyline points='500,200 760,420 760,760 240,760 240,420 500,200' fill='none' stroke='#1a1a1a' stroke-width='52' stroke-linejoin='round' stroke-linecap='round'/></svg></div>
+      <svg width="24" height="24" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+        <rect width="1000" height="1000" rx="220" fill="#f5f5f5"/>
+        <polyline points="500,200 760,420 760,760 240,760 240,420 500,200" fill="none" stroke="#1a1a1a" stroke-width="52" stroke-linejoin="round" stroke-linecap="round"/>
+      </svg>
       HomeBase AI
     </div>
     <ul class="footer-links">
@@ -484,7 +528,7 @@
       <li><a href="#realestate">Real Estate Agents</a></li>
       <li><a href="#pricing">Pricing</a></li>
       <li><a href="#faq">FAQ</a></li>
-      <li><a href="mailto:hello@homebaseai.com">Contact</a></li>
+      <li><a href="mailto:hello@homebaseai.app">Contact</a></li>
     </ul>
     <div class="footer-copy">© 2025 HomeBase AI</div>
   </footer>
